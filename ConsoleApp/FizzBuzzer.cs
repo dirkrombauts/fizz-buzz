@@ -9,6 +9,10 @@ namespace FizzBuzz.ConsoleApp
       var isFizzing = (currentNumber%3) == 0;
       var isBuzzing = (currentNumber %5) == 0;
 
+      if (isFizzing && isBuzzing)
+      {
+        return "FizzBuzz";
+      }
       if (isFizzing)
       {
         return "Fizz";

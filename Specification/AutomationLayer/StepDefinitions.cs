@@ -9,10 +9,12 @@ namespace FizzBuzz.Specification.AutomationLayer
   [Binding]
   public class StepDefinitions
   {
+    private int currentNumber;
+
     [Given(@"the current number is '(.*)'")]
-    public void GivenTheCurrentNumberIs(int p0)
+    public void GivenTheCurrentNumberIs(int currentNumber)
     {
-      ScenarioContext.Current.Pending();
+      this.currentNumber = currentNumber;
     }
 
     [When(@"I print the number")]

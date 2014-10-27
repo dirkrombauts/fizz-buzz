@@ -6,7 +6,14 @@ namespace FizzBuzz.ConsoleApp
   {
     public string Print(int currentNumber)
     {
-      return currentNumber.ToString();
+      if ((currentNumber%3) == 0)
+      {
+        return "Fizz";
+      }
+      else
+      {
+        return currentNumber.ToString();
+      }
     }
   }
 }

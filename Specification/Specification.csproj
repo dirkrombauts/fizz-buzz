@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AutomationLayer\StepDefinitions.cs" />
     <Compile Include="Features\FizzBuzz.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using FizzBuzz.ConsoleApp;
+using NFluent;
 using TechTalk.SpecFlow;
 
 namespace FizzBuzz.Specification.AutomationLayer
@@ -26,9 +24,9 @@ namespace FizzBuzz.Specification.AutomationLayer
     }
 
     [Then(@"the result is '(.*)'")]
-    public void ThenTheResultIs(int p0)
+    public void ThenTheResultIs(string expectedResult)
     {
-      ScenarioContext.Current.Pending();
+      Check.That(this.currentResult).IsEqualTo(expectedResult);
     }
   }
 }

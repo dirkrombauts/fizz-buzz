@@ -6,7 +6,7 @@ namespace FizzBuzz.ConsoleApp
   {
     public string Print(int currentNumber)
     {
-      throw new NotImplementedException();
+      return currentNumber.ToString();
     }
   }
 }

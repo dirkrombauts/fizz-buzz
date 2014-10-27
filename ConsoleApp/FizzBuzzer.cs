@@ -6,11 +6,14 @@ namespace FizzBuzz.ConsoleApp
   {
     public string Print(int currentNumber)
     {
-      if ((currentNumber%3) == 0)
+      var isFizzing = (currentNumber%3) == 0;
+      var isBuzzing = (currentNumber %5) == 0;
+
+      if (isFizzing)
       {
         return "Fizz";
       }
-      else if ((currentNumber %5) == 0)
+      else if (isBuzzing)
       {
         return "Buzz";
       }

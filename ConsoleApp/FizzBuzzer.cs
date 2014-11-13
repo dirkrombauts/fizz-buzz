@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace FizzBuzz.ConsoleApp
 {
@@ -7,13 +8,13 @@ namespace FizzBuzz.ConsoleApp
     public string Print(int currentNumber)
     {
       var isFizzing = (currentNumber%3) == 0;
-      var isBuzzing = (currentNumber %5) == 0;
+      var isBuzzing = (currentNumber%5) == 0;
 
       if (isFizzing && isBuzzing)
       {
         return "FizzBuzz";
       }
-      if (isFizzing)
+      else if (isFizzing)
       {
         return "Fizz";
       }
@@ -23,7 +24,7 @@ namespace FizzBuzz.ConsoleApp
       }
       else
       {
-        return currentNumber.ToString();
+        return currentNumber.ToString(CultureInfo.CurrentCulture);
       }
     }
   }
